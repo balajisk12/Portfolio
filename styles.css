@@ -1,0 +1,76 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Farsan&family=Smooch+Sans:wght@100..900&family=Winky+Sans:wght@300..900&display=swap');
+
+  
+
+body {
+    margin: 0;
+    font-family: Farsan, cursive;
+    background-color: rgb(27, 10, 10);
+    color: white;
+}
+  
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+    text-align: center;
+    font-size: 30px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+
+nav ul li a:hover {
+    color: cyan;
+}
+
+.container {
+    padding-top: 70px;
+    text-align: center;
+}
+
+
+/* Header Links */
+header nav ul li a {
+    color: white; /* Default color */
+    text-decoration: none; /* Remove underline */
+    font-size: 23px;
+    transition: all 0.3s ease-in-out; /* Smooth transtion for hover effects */
+    position: relative; /* For pseudo-element positioning */
+}
+
+/* Hover Animation */
+header nav ul li a:hover {
+    color: #62ea08; /* Change text color on hover */
+    transform: scale(1.1); /* Slightly enlarge the text */
+}
+
+/* Add Underline Animation */
+header nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Position below the text */
+    width: 0;
+    height: 2px;
+    background-color: #08dfea; /* Underline color */
+    transition: width 0.3s ease-in-out; /* Smooth underline animation */
+}
+
+/* On Hover, Expand Underline */
+header nav ul li a:hover::after {
+    width: 100%; /* Expand underline to full width */
+}

@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    background-color: #f4f4f4; /* Optional background color */
+}
+
+.farsan-regular {
+    font-family: "Farsan", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.main-container {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: flex-start; /* Align items to the left */
+    width: 80%; /* Adjust width as needed */
+    max-width: 1200px; /* Optional max width */
+    margin: 0 auto; /* Center the container */
+}
+
+.profile-photo {
+    flex: 1; /* Allow the photo to take up space */
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    margin-right: 70px; /* Increased space between photo and info */
+}
+
+.profile-photo img {
+    width: 300px; /* Increased size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 55%; /* Make it circular */
+    border: 2px solid rgb(94, 240, 121); /* Cyan border added */
+    box-shadow: 0 8px 20px rgba(42, 233, 13, 0.6); /* Cyan shadow for depth */
+}
+
+.profile-info {
+    flex: 3;
+}
+
+h1 {
+    font-size: 4em; /* Increased font size */
+    color: #0cffeb; /* Dark gray color */
+    margin: 0; /* Remove default margins */
+    transition: color 0.3s ease-in-out; /* Smooth color transition */
+}
+
+h1:hover {
+    color: #0cffb6; /* Change color on hover */
+}
+
+p {
+    font-size: 2em; /* Increased font size */
+    color: #ffffff; /* Light gray color */
+    margin: 15px 0; /* Add some margin for spacing */
+    transition: color 0.3s ease-in-out; /* Smooth color transition */
+}
+
+p:hover {
+    color: #1ef1e3; /* Change color on hover */
+}
+
+.contact-btn {
+    display: inline-block;
+    padding: 15px 30px; /* Increased padding for larger button */
+    background-color: #007BFF; /* Button color */
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 20px; /* Rounded corners */
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition for hover effects */
+    font-size: 1.8em; /* Increased font size for button text */
+}
+
+.contact-btn:hover {
+    background-color: #fcca26; /* Darker shade on hover */
+    color: black;
+}

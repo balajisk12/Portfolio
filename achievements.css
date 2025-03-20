@@ -1,0 +1,146 @@
+/* General Styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #111;
+    margin: 0;
+}
+
+/* Slider Container */
+.slider-container {
+    width: 60%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    width: 200%;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Certificate Card */
+.certificate-container {
+    width: 40%;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #000000;
+    border: 1px solid #ffffff;
+    text-align: center;
+    position: relative;
+}
+
+/* Certificate Image */
+.certificate-container img {
+    width: 100%;
+    height: auto;
+}
+
+/* Increase paragraph text size */
+.certificate-container p {
+    font-size: 22px;
+    color: white;
+}
+
+/* Styled Download Icon */
+.download-icon {
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    position: absolute;
+    position: absolute;
+    bottom: 30px; /* Move to the bottom */
+    right: 22px; /* Align to the right */
+    background-color: #38d8cd;
+    padding: 8px;
+    border-radius: 40%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Arrow Buttons */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 195, 255, 0.7);
+    color: black;
+    border: none;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+/* Positioning the Arrows */
+.arrow-left {
+    left: 20px;
+}
+
+.arrow-right {
+    right: -20px;
+}
+
+/* Dots Navigation */
+.navigation {
+    text-align: center;
+    margin-top: 10px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    display: inline-block;
+    background-color: grey;
+    width: 15px;
+    height: 15px;
+    margin: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Change dot color when active */
+#slide1:checked ~ .navigation label[for="slide1"],
+#slide2:checked ~ .navigation label[for="slide2"] {
+    background-color: rgb(0, 195, 255);
+}
+
+/* Slide Control */
+#slide1:checked ~ .slider {
+    transform: translateX(0%);
+}
+
+#slide2:checked ~ .slider {
+    transform: translateX(-50%);
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .slider-container {
+        width: 90%;
+        overflow-x: hidden;
+    }
+
+    .certificate-container {
+        width: 80%;
+    }
+}

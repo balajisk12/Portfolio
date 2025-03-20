@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Farsan&family=Smooch+Sans:wght@100..900&family=Winky+Sans:wght@300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Farsan&family=Smooch+Sans:wght@100..900&family=Winky+Sans:wght@300..900&display=swap');
+
+.content {
+    padding: 20px;
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Create 2 equal columns */
+    gap: 20px; /* Space between grid items */
+    margin-top: 60px;
+    text-align: justify; 
+}
+.content2{
+    display: flex; /* Add this line to align horizontally */
+    gap: 25px; /* Optional: adds space between sections */
+    overflow: hidden; /* Prevent scrolling */
+    width:95%; /* Set a fixed width for the container (adjust as needed) */
+    margin: 0 auto;
+    text-align: justify; 
+}
+
+#skills, #interests {
+    flex: 3; /* Make both Skills and Interests sections wider */
+}
+
+
+h3 {
+    margin-top: 0; /* Remove top margin for section headings */
+}
+
+
+/* General styling for the About section */
+.section {
+    font-family: Winky Sans, sans-serif;
+    margin: 18px;
+    padding: 18px;
+    border: 1px solid #20e5fb;
+    border-radius: 8px;
+    background-color: #000000;
+}
+
+/* Heading styling */
+.section h3 {
+    color: #eec912;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+
+/* Table styling */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #17ed65;
+}
+
+.table td {
+    color: #ffffff;
+}
+
+/* Add hover effect for rows */
+.table tr:hover {
+    background-color: #1b5a77;
+}
+
+
+
+.list {
+    list-style-type: disc; /* Use bullet points */
+    padding-left: 20px; /* Indent the list */
+}
+
+.list li {
+    font-size: 15px; /* Font size for each skill */
+    margin-bottom: 7px; /* Space between items */
+}
+
+
+
+

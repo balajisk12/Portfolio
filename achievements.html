@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certifications</title>
+    <link rel="stylesheet" href="achievements.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="achievements.html">Achievements</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <br><br>
+    <div class="slider-container">
+        <!-- Radio Buttons for Slider Control -->
+        <input type="radio" name="slider" id="slide1" checked>
+        <input type="radio" name="slider" id="slide2">
+
+        <!-- Left Arrow -->
+        <label for="slide1" class="arrow arrow-left">&#10094;</label> <!-- ❮ -->
+
+        <!-- Right Arrow -->
+        <label for="slide2" class="arrow arrow-right">&#10095;</label> <!-- ❯ -->
+
+        <!-- Slider Content -->
+        <div class="slider">
+            <!-- First Slide -->
+            <div class="slide">
+                <div class="certificate-container">
+                    <img src="images/Java.png" alt="Java Certification">
+                    <p>Programming in Java</p>
+                    <a href="Certificates/NPTEL - Programming in Java.pdf" download>
+                        <i class="fas fa-download download-icon"></i>
+                    </a>
+                </div>
+                <div class="certificate-container">
+                    <img src="images/Python.png" alt="Python Certification">
+                    <p>Joy of Computing Using Python</p>
+                    <a href="Certificates/NPTEL - Joy of computing.pdf" download>
+                        <i class="fas fa-download download-icon"></i>
+                    </a>
+                </div>
+            </div>
+        
+            <!-- Second Slide -->
+            <div class="slide">
+                <div class="certificate-container">
+                    <img src="images/SN - Micro.png" alt="SN-Micro Certification">
+                    <p>Welcome To Service Now</p>
+                    <a href="Certificates/Micro-Certification.pdf" download>
+                        <i class="fas fa-download download-icon"></i>
+                    </a>
+                </div>
+                <div class="certificate-container">
+                    <img src="images/CN.png" alt="Computer Networks">
+                    <p>Basics of Computer Networks</p>
+                    <a href="Certificates/Basics of Computer Network.pdf" download>
+                        <i class="fas fa-download download-icon"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- Dots Navigation -->
+        <div class="navigation">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+        </div>
+    </div>
+
+</body>
+</html>

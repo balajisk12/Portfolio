@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Balaji S</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="achievements.html">Achievements</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <div class="main-container">
+        <div class="profile-photo">
+            <img src="images/BALAJI.png" alt="Profile Photo">
+        </div>
+        <div class="profile-info">
+            <h1 id="typing-text"></h1>
+            <p>I am a Full Stack Developer who is Passionate about building web applications that create an impact</p>
+            <a href="#" class="contact-btn">Contact Me</a>
+        </div>
+    </div>
+</body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const text = "Hello, I'm  BALAJI S";
+    const typingTextElement = document.getElementById("typing-text");
+    
+    let index = 0;
+
+    function type() {
+        if (index < text.length) {
+            typingTextElement.textContent += text.charAt(index);
+            index++;
+            setTimeout(type, 100); // Adjust typing speed here (in milliseconds)
+        }
+    }
+
+    type(); // Start typing effect
+});
+
+</script>
+</html>

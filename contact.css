@@ -1,0 +1,173 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0a0a0a; /* Dark theme background */
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main container to align left and right sections */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Makes both sides the same height */
+    max-width: 900px;
+    margin: 35px auto;
+    padding: 20px;
+    background: #121212;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(250, 250, 250, 0.1);
+}
+
+/* Left Section: Contact Info and Profiles (Stacked) */
+.left-section {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Adds space between two sections */
+}
+
+/* Contact Details Styling */
+.contact-details,
+.otherProfiles-Container {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 15px;
+    border:1px solid #62ea08;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    margin: 0;
+}
+
+
+.contact-details{
+    border-bottom-left-radius: 0px;
+}
+
+
+.otherProfiles-Container {
+    border-top-left-radius: 0px;
+}
+
+/* Icons and Text Styling */
+.contact-details h3,
+.otherProfiles-Container h3 {
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+.container{
+    font-size: 25px;
+
+}
+
+.contact-details p {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    margin: 20px 0;
+    color: rgb(247, 248, 229);
+}
+
+
+.contact-details i {
+    margin-right: 10px;
+    color: #facc15; /* Yellow accent */
+    font-size: 18px;
+}
+
+/* Social Icons Styling */
+.social-icons {
+    margin-left: 40px;
+    display: flex;
+    flex-wrap: wrap; /* Allow icons to wrap to the next line if needed */
+    gap: 30px; /* Adjust the gap as needed */
+}
+
+.social-icons p {
+    margin: 0; /* Remove default paragraph margins */
+}
+
+.social-icons a {
+    display: inline-flex; /* Use inline-flex to control alignment */
+    align-items: center; /* Vertically center the icon */
+    justify-content: center; /* Horizontally center the icon if needed */
+    /* Add any additional styling for the links here */
+    text-decoration: none; /* Removes underline from all anchor tags in the social-icons container */
+}
+
+.social-icons i {
+    margin-right: 0px;
+    color: #facc15; /* Yellow accent */
+    font-size: 40px;
+}
+
+/* Right Section: Contact Form */
+.container {
+    width: 50%;
+    padding: 15px;
+    background: #1a1a1a;
+    border-radius: 15px;
+    border:1px solid #facc15;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.container h2 {
+    text-align: center;
+}
+
+/* Form Styling */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: calc(100% - 13px); /* Adjust width to account for the margin */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #2c2c2c;
+    color: white;
+    margin-right: 10px; /* Add right margin for spacing */
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #facc15;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #eab308;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-section,
+    .container {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+
+body::-webkit-scrollbar {
+    display: none; /* Hides scrollbar in Chrome, Safari, and Edge */
+}

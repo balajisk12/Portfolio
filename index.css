@@ -54,14 +54,14 @@ h1:hover {
 }
 
 p {
-    font-size: 2em; /* Increased font size */
+    font-size: 1.5em; /* Increased font size */
     color: #ffffff; /* Light gray color */
     margin: 15px 0; /* Add some margin for spacing */
     transition: color 0.3s ease-in-out; /* Smooth color transition */
 }
 
 p:hover {
-    color: #1ef1e3; /* Change color on hover */
+    color: #0cffb6; /* Change color on hover */
 }
 
 .contact-btn {

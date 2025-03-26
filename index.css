@@ -5,77 +5,108 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh; /* Full height of the viewport */
-    background-color: #f4f4f4; /* Optional background color */
-}
-
-.farsan-regular {
-    font-family: "Farsan", cursive;
-    font-weight: 400;
-    font-style: normal;
+    background-color: #0d0505; /* Dark background */
 }
 
 .main-container {
     display: flex;
-    align-items: center; /* Center items vertically */
-    justify-content: flex-start; /* Align items to the left */
-    width: 80%; /* Adjust width as needed */
-    max-width: 1200px; /* Optional max width */
-    margin: 0 auto; /* Center the container */
+    align-items: center; /* Align vertically */
+    justify-content: center; /* Bring text closer to image */
+    width: 65%;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-right: 100px;
 }
 
+/* Profile info section */
+.profile-info {
+    flex: 1;
+    text-align: left;
+    margin-right: 20px; /* Adjust spacing */
+}
+
+/* Profile photo section */
 .profile-photo {
-    flex: 1; /* Allow the photo to take up space */
+    flex: 1;
     display: flex;
-    justify-content: center; /* Center the image horizontally */
-    margin-right: 70px; /* Increased space between photo and info */
+    justify-content: flex-start; /* Align closer to text */
 }
 
 .profile-photo img {
-    width: 300px; /* Increased size */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 55%; /* Make it circular */
-    border: 2px solid rgb(94, 240, 121); /* Cyan border added */
-    box-shadow: 0 8px 20px rgba(42, 233, 13, 0.6); /* Cyan shadow for depth */
-}
-
-.profile-info {
-    flex: 3;
+    width: 250px; /* Adjusted size */
+    height: auto;
+    border-radius: 50%; /* Circular shape */
+    border: 3px solid #5ef079; /* Neon green border */
+    box-shadow: 0 8px 20px rgba(42, 233, 13, 0.6);
 }
 
 h1 {
-    font-size: 4em; /* Increased font size */
-    color: #0cffeb; /* Dark gray color */
-    margin: 0; /* Remove default margins */
-    transition: color 0.3s ease-in-out; /* Smooth color transition */
-}
-
-h1:hover {
-    color: #0cffb6; /* Change color on hover */
+    font-size: 3.5em; /* Adjusted size */
+    color: #0cffeb;
+    margin: 0;
 }
 
 p {
-    font-size: 1.5em; /* Increased font size */
-    color: #ffffff; /* Light gray color */
-    margin: 15px 0; /* Add some margin for spacing */
-    transition: color 0.3s ease-in-out; /* Smooth color transition */
+    font-size: 1.6em;
+    color: #ffffff;
+    margin: 10px 0;
 }
 
-p:hover {
-    color: #0cffb6; /* Change color on hover */
+/* Button & Social Icons aligned in a single row */
+.button-container {
+    display: flex;
+    align-items: center; /* Align items in a straight line */
+    gap: 15px; /* Adjust spacing */
+    margin-top: 15px;
 }
 
+/* Contact button */
 .contact-btn {
-    display: inline-block;
-    padding: 15px 30px; /* Increased padding for larger button */
-    background-color: #007BFF; /* Button color */
-    color: white; /* Text color */
-    text-decoration: none; /* Remove underline */
-    border-radius: 20px; /* Rounded corners */
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition for hover effects */
-    font-size: 1.8em; /* Increased font size for button text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 15px;
+    font-size: 1.4em;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    min-width: 100px; /* Consistent button width */
+    height: 30px; /* Consistent height with icons */
 }
 
 .contact-btn:hover {
-    background-color: #fcca26; /* Darker shade on hover */
+    background-color: #fcca26;
     color: black;
+}
+
+/* Social Media Icons next to Contact Me button */
+.social-icons {
+    display: flex;
+    align-items: center; /* Align icons properly */
+    gap: 12px; /* Adjust spacing */
+}
+
+/* Adjust icon and image size */
+.social-icons i, .social-icons img {
+    font-size: 1.6em;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons i:hover, .social-icons img:hover {
+    transform: scale(1.2);
+}
+
+/* Remove underline from social media icons */
+.social-icons a {
+    text-decoration: none; /* Remove underline */
+    display: flex; /* Align properly */
+    align-items: center;
 }

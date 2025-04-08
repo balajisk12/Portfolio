@@ -21,18 +21,18 @@
             </ul>
         </nav>
     </header>
-    <br>
-    <br>
-    <br>
+
+    <br><br><br>
+
     <div class="contact-container">
         <!-- Left Section -->
         <div class="left-section">
             <!-- Contact Details Section -->
             <div class="contact-details">
                 <h3>Contact Info</h3>
-                <p><i class="fas fa-envelope"></i>Balajisk.it22@bitsathy.ac.in</p>
-                <p><i class="fas fa-envelope"></i>Balajisenthilkannan@gmail.com</p>
-                <p><i class="fas fa-phone"></i>9344001833</p>
+                <p><i class="fas fa-envelope"></i> Balajisk.it22@bitsathy.ac.in</p>
+                <p><i class="fas fa-envelope"></i> Balajisenthilkannan@gmail.com</p>
+                <p><i class="fas fa-phone"></i> 9344001833</p>
             </div>
 
             <!-- Other Profiles Section -->
@@ -63,12 +63,12 @@
             </div>
         </div>
 
-        <!-- Right Section: Contact Form -->
+        <!-- Right Section -->
         <div class="container">
-             <p id="formMessage" style="color: lightgreen; margin-top: 10px;"></p>
-            
+
+            <p id="formMessage" style="color: rgb(176, 255, 176); font-size: 15px;"></p>
             <h3>Contact Me</h3>
-            <form action="https://formspree.io/f/xdkeavpe" method="POST" class="contact-form">
+            <form id="contactForm" action="https://formspree.io/f/xdkeavpe" method="POST" class="contact-form">
                 <div class="input-group">
                     <input type="text" name="name" placeholder="Your Name" required>
                 </div>
@@ -80,15 +80,15 @@
                 </div>
                 <button type="submit">Send Message</button>
             </form>
+            <!-- Message Area -->
            
         </div>
     </div>
 
-    <br>
-    <br>
-    <br>
+    <br><br><br>
 
-   <script>
+    <!-- JavaScript to handle form submission without redirect -->
+    <script>
         const form = document.getElementById("contactForm");
         const formMessage = document.getElementById("formMessage");
 
@@ -105,7 +105,7 @@
                 }
             }).then(response => {
                 if (response.ok) {
-                    formMessage.textContent = "Your Message Sent Successfully";
+                    formMessage.textContent = "Your Message Sent Successfully!";
                     form.reset();
                 } else {
                     formMessage.textContent = "Oops! Something went wrong.";

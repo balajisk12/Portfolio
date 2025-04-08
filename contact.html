@@ -65,6 +65,8 @@
 
         <!-- Right Section: Contact Form -->
         <div class="container">
+             <p id="formMessage" style="color: lightgreen; margin-top: 10px;"></p>
+            
             <h3>Contact Me</h3>
             <form action="https://formspree.io/f/xdkeavpe" method="POST" class="contact-form">
                 <div class="input-group">
@@ -78,11 +80,7 @@
                 </div>
                 <button type="submit">Send Message</button>
             </form>
-
-            <!-- Success Message (Hidden by default) -->
-            <div id="successMessage" class="success-message" style="display:none;">
-                <p>Your message has been sent successfully! Thank you for contacting us.</p>
-            </div>
+           
         </div>
     </div>
 
@@ -90,19 +88,32 @@
     <br>
     <br>
 
-    <!-- Add your custom JavaScript below -->
-    <script>
-       document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector('.contact-form');
-    const successMessage = document.getElementById('successMessage');
+   <script>
+        const form = document.getElementById("contactForm");
+        const formMessage = document.getElementById("formMessage");
 
-    form.addEventListener('submit', function (e) {
-        // Optional: Add this if you want to keep the success message hidden until Formspree's reply
-        e.preventDefault();  // Prevent the default form submission (no page reload)
-        successMessage.style.display = 'block'; // Show success message
-        form.reset();  // Reset the form fields
-    });
-});
+        form.addEventListener("submit", function (e) {
+            e.preventDefault(); // Stop default form submit
+
+            const formData = new FormData(form);
+
+            fetch(form.action, {
+                method: form.method,
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    formMessage.textContent = "Your Message Sent Successfully";
+                    form.reset();
+                } else {
+                    formMessage.textContent = "Oops! Something went wrong.";
+                }
+            }).catch(error => {
+                formMessage.textContent = "Network error. Please try again.";
+            });
+        });
     </script>
 </body>
 </html>

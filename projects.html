@@ -4,66 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
+
     <link rel="stylesheet" href="projects.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="achievements.html">Achievements</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <br><br>
-    
-    <div class="slider-container">
-        <!-- Radio Buttons for Slider Control -->
-        <input type="radio" name="slider" id="slide1" checked>
-        <input type="radio" name="slider" id="slide2">
 
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-        <!-- Left & Right Arrows -->
-        <label for="slide1" class="arrow arrow-left">&#10094;</label>
-        <label for="slide2" class="arrow arrow-right">&#10095;</label>
-       
+<br><br>
 
-        <!-- Slider Content -->
-        <div class="slider">
-            <!-- First Slide -->
-            <div class="slide">
-                <div class="project-container">
-                    <img src="images/project1.png" alt="Project 1">
-                    <p><strong>Project 1: Portfolio Website</strong></p>
-                    <a href="projects/portfolio.html">
-                        <button class="view-button">View Project</button>
-                    </a>
+<div class="slider-container">
+
+    <!-- Radio Buttons -->
+    <input type="radio" name="slider" id="slide1" checked>
+    <input type="radio" name="slider" id="slide2">
+    <input type="radio" name="slider" id="slide3">
+
+    <!-- Slider -->
+    <div class="slider">
+
+        <!-- Slide 1 -->
+        <div class="slide">
+            <div class="project-container">
+                <img src="images/project1.png" alt="Lab Admission System">
+                <p><strong>Lab Admission System</strong></p>
+
+                <div class="info">
+                    <i class="fas fa-info-circle"></i>
+                    <div class="tooltip">
+                        Django<br>
+                        HTML, CSS<br>
+                        MySQL
+                    </div>
                 </div>
             </div>
+        </div>
 
-            <!-- Second Slide -->
-            <div class="slide">
-                <div class="project-container">
-                    <img src="images/project2.png" alt="Project 2">
-                    <p><strong>Project 2: Lab Booking System</strong></p>
-                    <a href="projects/lab-booking.html">
-                        <button class="view-button">View Project</button>
-                    </a>
+        <!-- Slide 2 -->
+        <div class="slide">
+            <div class="project-container">
+                <img src="images/project-2.png" alt="Snake Game">
+                <p><strong>Snake Game</strong></p>
+
+                <div class="info">
+                    <i class="fas fa-info-circle"></i>
+                    <div class="tooltip">
+                        Java<br>
+                        OOP Concepts
+                    </div>
                 </div>
             </div>
-
         </div>
 
-        <!-- Dots Navigation -->
-        <div class="navigation">
-            <label for="slide1"></label>
-            <label for="slide2"></label>
+        <!-- Slide 3 -->
+        <div class="slide">
+            <div class="project-container">
+                <img src="images/project3.png" alt="PDF Tools">
+                <p><strong>PDF Tools</strong></p>
+
+                <div class="info">
+                    <i class="fas fa-info-circle"></i>
+                    <div class="tooltip">
+                        Flask<br>
+                        HTML,CSS<br>
+                        Tebi.io<br>
+                        Firebase<br>
+                    </div>
+                </div>
+            </div>
         </div>
+
     </div>
+
+    <!-- Navigation Dots -->
+    <div class="navigation">
+        <label for="slide1"></label>
+        <label for="slide2"></label>
+        <label for="slide3"></label>
+    </div>
+
+</div>
 
 </body>
 </html>

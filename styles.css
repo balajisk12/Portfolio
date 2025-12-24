@@ -45,11 +45,12 @@ nav ul li a:hover {
 
 /* Header Links */
 header nav ul li a {
-    color: white; /* Default color */
-    text-decoration: none; /* Remove underline */
-    font-size: 23px;
-    transition: all 0.3s ease-in-out; /* Smooth transtion for hover effects */
-    position: relative; /* For pseudo-element positioning */
+    color: white;
+    text-decoration: none;
+    font-size: 23px; /* Original Desktop Size */
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    display: inline-block; /* Required for transform scale to work well */
 }
 
 /* Hover Animation */
@@ -73,4 +74,48 @@ header nav ul li a::after {
 /* On Hover, Expand Underline */
 header nav ul li a:hover::after {
     width: 100%; /* Expand underline to full width */
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 5px 0; /* Reduce vertical padding */
+        font-size: 20px; /* Reduce base font size of header */
+    }
+
+    nav ul li {
+        margin: 0 8px; /* Reduce space between links */
+        display: inline-block; /* Ensure they stay in a row if possible */
+    }
+
+    header nav ul li a {
+        font-size: 16px; /* Reduce link text size for mobile */
+    }
+
+    /* Adjust underline position for smaller text */
+    header nav ul li a::after {
+        bottom: -2px; 
+    }
+
+    /* Ensure the container doesn't overlap the smaller header */
+    .container {
+        padding-top: 50px; 
+    }
+}
+
+/* For very small screens (Phones in portrait) */
+@media (max-width: 480px) {
+    nav ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap; /* Allows links to wrap to a second line if they are too long */
+        gap: 10px;
+    }
+
+    nav ul li {
+        margin: 0; /* Use gap instead for cleaner spacing */
+    }
+
+    header nav ul li a {
+        font-size: 14px; /* Minimum readable size */
+    }
 }
